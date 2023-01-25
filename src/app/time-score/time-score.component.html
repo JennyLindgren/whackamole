@@ -1,6 +1,7 @@
 <!-- <button class="button" (click)="onStartClick()">Start game</button> <br> -->
-
-<button (click)="onStartClick()">Start</button>
+<div class="button">
+    <button  disabled={{this.isDisabled}} (click)="onStartClick()">Start</button>
+</div>
 <h2>Your Score:<br>
     {{this.state.score}}
 </h2>

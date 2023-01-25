@@ -5,7 +5,6 @@ import { AppComponent } from './app.component';
 import { TimeScoreComponent } from './time-score/time-score.component';
 import { GamePlanComponent } from './game-plan/game-plan.component';
 import {StateService } from './state.service';
-import { MoleComponent } from './mole/mole.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 
@@ -14,7 +13,6 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     AppComponent,
     TimeScoreComponent,
     GamePlanComponent,
-    MoleComponent
   ],
   imports: [
     BrowserModule,

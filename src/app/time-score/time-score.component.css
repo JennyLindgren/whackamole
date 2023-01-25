@@ -1,8 +1,12 @@
 h2{
-    margin-left: 280px;
+    text-align: center;
    
 }
 .button{
-   margin-left: 280px;
-   margin-top: 50px;
+    display: flex;
+    margin-top: 20px;
+}
+
+.button > button {
+    margin: auto;
 }

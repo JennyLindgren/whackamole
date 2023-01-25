@@ -9,37 +9,26 @@ import { StateService } from '../state.service';
 })
 
 export class TimeScoreComponent {
-  state!: Gamestate;                // This attribute contains the state - it is used to determine how the component should render
+  isDisabled: any; //any gör att värdet bestäms vid tilldelning
+  state!: Gamestate;       // Det här attributet innehåller state - det används för att bestämma hur komponenten ska renderas
   
+  // Premurerar på state för timer (och knappen men den funkar inte)
   constructor(private _state: StateService) {
       this._state.getState().subscribe((newState) => {
-        this.state = newState;
-      });
-   }
+      this.state = newState;
+      
+      this.isDisabled = newState.isDisabled;
+      //Skriver ut i consolen att den är falsk men uppdaterar inte läget
+      console.log(this.isDisabled) 
+    });
+  }
 
+  // Metod kopplad till start knappen för att köra igång
   onStartClick() {
     this._state.timerStart();
     this._state.game();
+    this._state.IsDisable(true)
   }
-
-
-// time!:time;                // This attribute contains the state - it is used to determine how the component should render
-// score!: any;
-  
-//  constructor(private _time: FunctionService, private _newGame: FunctionService, private _score: FunctionService) {
-//     this._time.getTime().subscribe((newTime) => {
-//        this.time = newTime;
-//     }); 
-//     this._score.getScore().subscribe((newScore) => {
-//       this.score = newScore;
-//     }) 
-    
-//   }
-
-// onStartClick() {
-//   this._time.timerStart();
-//   this._newGame.newGame();
-// }
 
 }
 

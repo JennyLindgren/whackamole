@@ -3,7 +3,7 @@ export type Gamestate = {
     score?: number;
     isVisible: boolean;
     moleId?: number;
-    squareId?: number;
+    isDisabled?: boolean;
 
 }
 
