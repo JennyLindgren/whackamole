@@ -95,14 +95,14 @@
         clearInterval(this.gameInterval);
         this.gameInterval = null;
       } else {
-        // Tiden är inte ute så vi skapar några mullvader till
+        // Tiden är inte ute så de skapas några mullvader till
         this.showMole();
         setTimeout(() => this.showMole(), 1000);
         setTimeout(() => this.showMole(), 2000);
       }
     }, 4000)
   }
-  //Så att mole försvinner när vi klickat på den
+  //Så att mole försvinner när någon klickat på den
   destroyMoles() {
     this.moles.map((mole) => {
       console.log('removing mole')
@@ -123,7 +123,7 @@
         clearInterval(this.interval);         // Stoppar intervallen
         this.interval = null;               // Rensar intervallen
       
-         // stateChanged för att medela att vi har förändrat state
+         // stateChanged för att meddela att det har förändrat state
         this.stateChanged();
         
        
@@ -147,7 +147,7 @@
     this.state.score = this.state.score ? this.state.score + 1 : 1;
     // Här sätter den isVisible på den aktuella mullvaden till false så den försvinner från spelplan
     this.moles[moleId].isVisible = false;
-    // stateChanged för att medela att vi har förändrat state
+     // stateChanged för att medela att det har förändrat state
     this.stateChanged();
   }
 
