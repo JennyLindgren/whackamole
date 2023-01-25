@@ -62,7 +62,6 @@
         let timeout = setTimeout(() => {
           this.moles[random].isVisible = false;
         }, 4000)
-        // this.timers.splice(random, 1, timeout)
         this.timers[random] = timeout;
         isRendering = false;
         console.log(random)
