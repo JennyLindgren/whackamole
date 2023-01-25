@@ -1,0 +1,16 @@
+.game-plan {
+    margin: auto;
+	width: 508px;
+	height: 431px;
+	display: flex;
+	flex-wrap: wrap;
+	border: 1px solid black;
+}
+
+.mole {
+	height: 85px;
+	width: 100px;
+	border: solid black 1px;
+}
+
+
