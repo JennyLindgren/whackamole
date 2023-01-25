@@ -89,7 +89,7 @@
         console.log('time stopped')
         // Ta bort mullvader
         this.destroyMoles();
-        // Borde sätta startknappen till disable false
+        // Sätter startknappen till disable false
         this.IsDisable(false);
         // Töm game intervallen
         clearInterval(this.gameInterval);

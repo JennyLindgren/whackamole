@@ -1,6 +1,6 @@
 
 <div class="button">
-    <button  disabled={{this.isDisabled}} (click)="onStartClick()">Start</button>
+    <button  [disabled]="isDisabled"(click)="onStartClick()">Start</button>
 </div>
 <h2>Your Score:<br>
     {{this.state.score}}
